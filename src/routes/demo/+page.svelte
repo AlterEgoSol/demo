@@ -233,20 +233,23 @@
     .logo {
         font-size: 2rem;
         font-weight: 600;
-        margin: 0 0 3rem 0;
+        margin: 0 0 3.5rem 0;
         background: linear-gradient(to right, #0066ff, #818cf8);
         -webkit-background-clip: text;
         color: transparent;
         letter-spacing: -0.02em;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .section-title {
         font-size: 0.875rem;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #94a3b8;
-        margin: 2rem 0 1rem;
+        color: #64748b;
+        margin: 2rem 0 1.25rem;
+        padding-left: 0.5rem;
     }
 
     .alter-ego-list {
@@ -256,10 +259,10 @@
     }
 
     .alter-ego-card {
-        padding: 1.25rem;
+        padding: 1.5rem;
         margin-bottom: 0.75rem;
         position: relative;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         overflow: hidden;
     }
@@ -274,12 +277,35 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    .alter-ego-card h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #1e293b;
+        margin-bottom: 0.375rem;
+    }
+
+    .status {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .status.active {
+        color: #15803d;
+    }
+
+    .status.training {
+        color: #b45309;
+    }
+
     .status-indicator {
         position: absolute;
         top: 50%;
-        left: -2px;
-        width: 4px;
-        height: 24px;
+        left: 0;
+        width: 3px;
+        height: 60%;
         border-radius: 2px;
         transform: translateY(-50%);
     }
@@ -335,13 +361,15 @@
     .confidence-pill {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
+        gap: 0.75rem;
+        padding: 0.75rem 1.25rem;
         background: rgba(34, 197, 94, 0.1);
         border: 1px solid rgba(34, 197, 94, 0.2);
         border-radius: 100px;
         font-size: 0.875rem;
-        color: #4ade80;
+        color: #16a34a;
+        font-weight: 500;
+        backdrop-filter: blur(8px);
     }
 
     .pulse {
@@ -483,16 +511,30 @@
         color: #2563eb;
     }
 
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
     .header h2 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 2.25rem;
         font-weight: 600;
+        letter-spacing: -0.02em;
+        background: linear-gradient(to right, #0f172a, #334155);
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
     .specialization {
-        color: #6b7280;
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
+        color: #64748b;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        font-weight: 500;
     }
 
     .tasks-grid {
