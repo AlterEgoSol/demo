@@ -77,6 +77,12 @@
     </nav>
     
     <main class="content">
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8">
+            <p class="text-yellow-700">
+                <strong>Demo Platform:</strong> This is a demonstration version showing how the final product will look and function. 
+                Some features may be limited or simulated.
+            </p>
+        </div>
         <div class="header glass">
             <div>
                 <h2>{selectedAlterEgo.name}</h2>
