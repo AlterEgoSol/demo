@@ -424,8 +424,8 @@
         background: transparent;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border: none;
-        cursor: pointer;
         border-radius: 100px;
+        cursor: pointer;
         font-weight: 500;
         font-size: 0.875rem;
         position: relative;
@@ -442,25 +442,18 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
-    .tabs button.active::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20px;
-        height: 2px;
-        background: linear-gradient(to right, #0066ff, #818cf8);
-        border-radius: 2px;
-    }
-
     .create-new {
         margin-top: 1rem;
         padding: 1rem;
         width: 100%;
-        background: linear-gradient(135deg, #0066ff, #818cf8);
-        color: white;
-        border: none;
+        background: linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.1) 0%,
+            rgba(99, 102, 241, 0.1) 100%
+        );
+        color: #2563eb;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
@@ -468,47 +461,26 @@
         justify-content: center;
         gap: 0.5rem;
         font-weight: 500;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .create-new::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, #0066ff, #818cf8);
-        opacity: 0;
-        transition: opacity 0.3s ease;
     }
 
     .create-new:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+        background: linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.15) 0%,
+            rgba(99, 102, 241, 0.15) 100%
+        );
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
     }
 
     .create-new:active {
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 
     .plus {
         font-size: 1.2rem;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        transition: all 0.3s ease;
-    }
-
-    .create-new:hover .plus {
-        background: rgba(255, 255, 255, 0.3);
-        transform: rotate(90deg);
+        font-weight: 500;
+        color: #2563eb;
     }
 
     .header h2 {
@@ -637,15 +609,19 @@
     }
 
     input:checked + .slider {
-        background: linear-gradient(135deg, #0066ff, #818cf8);
+        background: linear-gradient(135deg, #2563eb, #4f46e5);
     }
 
     input:checked + .slider:before {
         transform: translateX(24px);
     }
 
-    .switch:hover .slider:before {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    .switch:hover .slider {
+        border-color: #e2e8f0;
+    }
+
+    input:checked + .slider:hover {
+        border-color: rgba(37, 99, 235, 0.2);
     }
 
     .training-stats {
